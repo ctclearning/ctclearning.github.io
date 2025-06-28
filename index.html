@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Crack the Code Learning</title>
+  <title>Crack the Code Learning | Metacognitive Coaching for P3–P6</title>
   <link rel="icon" href="favicon.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
   <style>
@@ -11,11 +11,12 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      line-height: 1.6;
     }
     header {
       background: #003366;
       color: #fff;
-      padding: 20px 0;
+      padding: 20px;
       text-align: center;
     }
     nav {
@@ -33,92 +34,119 @@
       background: #003366;
     }
     .hero {
-      background: url('homepage-hero.jpg') no-repeat center center/cover;
-      height: 350px;
+      background: url('hero-main.jpg') no-repeat center center/cover;
       color: white;
-      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+      height: 400px;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
     }
     .hero h1 {
       font-size: 2.8em;
-      margin: 0;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.6);
       padding: 10px 20px;
-      border-radius: 10px;
+      border-radius: 8px;
     }
     .hero p {
       font-size: 1.2em;
-      margin-top: 12px;
-      background-color: rgba(0, 0, 0, 0.4);
+      margin-top: 10px;
+      background-color: rgba(0, 0, 0, 0.6);
       padding: 8px 16px;
       border-radius: 6px;
     }
-    section {
-      padding: 40px 20px;
+    .container {
       max-width: 1000px;
       margin: auto;
+      padding: 40px 20px;
+    }
+    .section {
+      margin-bottom: 60px;
+    }
+    .section h2 {
+      color: #003366;
+      margin-bottom: 20px;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 8px;
+      background: #f9f9f9;
+    }
+    .card h3 {
+      color: #0055a5;
+    }
+    .cta {
+      text-align: center;
+      margin-top: 40px;
     }
     footer {
       background: #003366;
       color: white;
       text-align: center;
-      padding: 20px 0;
+      padding: 20px;
       margin-top: 40px;
     }
   </style>
 </head>
 <body>
   <header>
-    <div style="display: flex; align-items: center; justify-content: center;">
-      <img src="logo.png" alt="Crack the Code Learning logo" style="height: 60px; background: white; padding: 8px; border-radius: 12px; margin-right: 12px;">
-      <div>
-        <h1 style="margin: 0;">Crack the Code Learning</h1>
-        <p style="margin: 0;">Coaching Students. Unlocking Potential.</p>
-      </div>
-    </div>
+    <img src="logo.png" alt="CTCL Logo" style="height: 60px; margin-bottom: 10px;" />
+    <h1>Crack the Code to Success</h1>
+    <p>Metacognitive Coaching for Primary 3–6 English & Math</p>
   </header>
 
   <nav>
-    <a href="index.html">Home</a>
     <a href="#about">About</a>
     <a href="#programmes">Programmes</a>
     <a href="#locations">Centres</a>
     <a href="#contact">Contact</a>
     <a href="why-ctcl.html">Why CTCL</a>
     <a href="why-p3toP6.html">Why P3–P6</a>
-    <a href="coach-asher.html">Meet Coach Asher</a>
-
+    <a href="coach-asher.html">Coach Asher</a>
   </nav>
 
-  <div class="hero">
-    <h1>Crack the Code to Success</h1>
-    <p>Metacognitive Coaching for Primary 3–6 English & Math</p>
-  </div>
+  <section class="hero">
+    <h1>Smarter Learning Starts Here</h1>
+    <p>Empowering students to think, plan, and learn with confidence</p>
+  </section>
 
-  <section id="about">
-  <h2>About Us</h2>
-  <p>At Crack the Code Learning, we don’t just teach — we coach. Using structured strategies and metacognitive techniques, we help students understand how to learn, not just what to study.</p>
-  <p><a href="coach-asher.html" style="font-weight: bold; color: #0055a5;">Meet Coach Asher &rarr;</a></p>
-</section>
-  <section id="programmes">
+  <section id="about" class="container section">
+    <h2>About Us</h2>
+    <p>At Crack the Code Learning, we don’t just teach — we coach. Using structured strategies and metacognitive techniques, we help students understand how to learn, not just what to study.</p>
+    <p><a href="coach-asher.html" style="font-weight: bold; color: #0055a5;">Meet Coach Asher &rarr;</a></p>
+  </section>
+
+  <section id="programmes" class="container section">
     <h2>Our Programmes</h2>
-    <ul>
-      <li>English Coaching (P3–P6)</li>
-      <li>Math Coaching (P3–P6)</li>
-    </ul>
+    <div class="card-grid">
+      <div class="card">
+        <h3>English (P3–P6)</h3>
+        <p>Master every exam component through our CodeKey™ strategies: Grammar, Comprehension, Vocabulary, Writing, and Oral.</p>
+      </div>
+      <div class="card">
+        <h3>Math (P3–P6)</h3>
+        <p>Learn Math through problem-solving heuristics and step-by-step thinking models, designed for exam confidence and clarity.</p>
+      </div>
+    </div>
   </section>
 
-  <section id="locations">
+  <section id="locations" class="container section">
     <h2>Our Centres</h2>
-    <p>Locations at Tampines, Bedok Reservoir, and Online Live Classes.</p>
+    <p>Find us at Tampines, Bedok Reservoir, or join our Online Live Classes from anywhere in Singapore.</p>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="container section">
     <h2>Contact Us</h2>
-    <p>Email: ctcl.asher@gmail.com<br/>WeChat: ctcl-asher</p>
+    <p>📞 WhatsApp: <a href="https://wa.me/6598881234">+65 9888 1234</a></p>
+    <p>📧 Email: <a href="mailto:enquiries@ctcl.sg">enquiries@ctcl.sg</a></p>
   </section>
 
   <footer>
