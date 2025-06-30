@@ -2,84 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Crack the Code Learning</title>
-  <link rel="icon" href="favicon.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <div style="display: flex; align-items: center; justify-content: center;">
-      <img src="logo.png" alt="CTCL logo" style="height: 60px; background: white; padding: 8px; border-radius: 12px; margin-right: 12px;">
-      <div>
-        <h1 style="margin: 0;">Crack the Code Learning</h1>
-        <p style="margin: 0;">Metacognitive Coaching powered by CodeKey™</p>
-      </div>
+  <header class="hero sticky-nav">
+    <div class="hero-overlay">
+      <img src="logo.png" alt="Crack the Code Learning logo" class="logo" />
+      <h1>Crack the Code Learning</h1>
+      <p class="tagline">Metacognitive Coaching powered by <strong>CodeKey™</strong></p>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#programmes">Programmes</a>
+        <a href="#locations">Centres</a>
+        <a href="#contact">Contact</a>
+        <a href="why-ctcl.html">Why CTCL</a>
+        <a href="why-p3toP6.html">Why P3–P6</a>
+        <a href="coach-asher.html">Coach Asher</a>
+      </nav>
     </div>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="#about">About</a>
-    <a href="#programmes">Programmes</a>
-    <a href="#locations">Centres</a>
-    <a href="#contact">Contact</a>
-    <a href="why-ctcl.html">Why CTCL</a>
-    <a href="why-p3toP6.html">Why P3–P6</a>
-    <a href="coach-asher.html">Coach Asher</a>
-  </nav>
-
-  <section class="hero" style="background-image: url('hero-image.png');">
-    <h1>Not Just Tuition. A System. A Strategy. A Smarter Way to Learn.</h1>
-    <p>Metacognitive Coaching powered by <strong>CodeKey™</strong></p>
+  <section class="intro">
+    <h2><i class="fas fa-lightbulb"></i> About Us</h2>
+    <p>We don’t just teach — we coach. At Crack the Code Learning, our students use metacognitive strategies to learn smarter, not harder.</p>
+    <p><a href="coach-asher.html" class="btn">Meet Coach Asher &rarr;</a></p>
   </section>
 
-  <section id="about" class="section-highlight">
-    <h2>📘 About Us</h2>
-    <p style="max-width: 800px; margin: auto;">
-      At Crack the Code Learning, we don’t just teach — we coach. We help students understand how to learn, not just what to study. Through CodeKey™ strategies and metacognitive coaching, our students become confident, independent learners.
-    </p>
-    <p style="text-align: center; margin-top: 15px;">
-      <a href="coach-asher.html" style="font-weight: bold; color: #0055a5;">Meet Coach Asher &rarr;</a>
-    </p>
-  </section>
-
-  <section id="programmes" class="container">
-    <h2 style="text-align: center;">🧠 Our Programmes</h2>
-    <div class="programmes">
-      <div class="programme-card">
+  <section id="programmes" class="highlight">
+    <h2><i class="fas fa-book"></i> Our Programmes</h2>
+    <div class="card-container">
+      <div class="card">
+        <i class="fas fa-spell-check"></i>
         <h3>English (P3–P6)</h3>
-        <p>Master grammar, comprehension, writing, oral and vocabulary with CodeKey™ strategies.</p>
+        <p>Grammar, comprehension, writing & oral techniques</p>
       </div>
-      <div class="programme-card">
+      <div class="card">
+        <i class="fas fa-divide"></i>
         <h3>Math (P3–P6)</h3>
-        <p>Step-by-step heuristics for every topic, built for PSLE mastery and long-term confidence.</p>
+        <p>Heuristics and structured solving strategies</p>
       </div>
     </div>
-    <p style="text-align: center; margin-top: 20px;">
-      <a href="why-ctcl.html" style="font-weight: bold; color: #0055a5;">See how we’re different &rarr;</a>
-    </p>
   </section>
 
-  <section id="locations" class="section-highlight">
-    <h2>📍 Our Centres</h2>
-    <ul style="list-style-type: none; padding: 0; text-align: center;">
-      <li>Tampines</li>
-      <li>Bedok Reservoir</li>
-      <li>Online Live Classes</li>
-    </ul>
+  <section id="locations">
+    <h2><i class="fas fa-map-marker-alt"></i> Our Centres</h2>
+    <p>Available at Bedok Reservoir, Tampines, and Online (Live).</p>
   </section>
 
-  <section style="padding: 30px 20px; text-align: center; background-color: #eef6ff;">
-    <blockquote style="font-size: 1.1em; color: #003366; font-style: italic;">
-      “My son improved from AL5 to AL2 in just one term!”<br>— Parent of P5 student
-    </blockquote>
+  <section id="contact" class="highlight">
+    <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+    <p>WhatsApp: <a href="https://wa.me/6598765432">+65 9876 5432</a><br />
+    WeChat: ctcl-asher</p>
   </section>
 
-  <section id="contact" class="container">
-    <h2>📬 Contact Us</h2>
-    <p>Email: <a href="mailto:ctclearning@gmail.com">ctclearning@gmail.com</a></p>
-    <p>WeChat: ctcl-asher</p>
+  <section class="testimonial-box">
+    <blockquote>“My daughter jumped from AL4 to AL1 in 3 months — all thanks to CodeKey™.”<br /><cite>— Parent of P6 student</cite></blockquote>
   </section>
 
   <footer>
