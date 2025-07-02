@@ -321,5 +321,28 @@
     z-index: 1000;
   }
 </style>
+  <script>
+  let currentIndex = 0;
+  const testimonials = document.querySelectorAll('.testimonial');
+
+  function showSlide(index) {
+    testimonials.forEach((testimonial, i) => {
+      testimonial.style.display = i === index ? 'block' : 'none';
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % testimonials.length;
+    showSlide(currentIndex);
+  }
+
+  // Auto-rotate every 6 seconds
+  setInterval(nextSlide, 6000);
+
+  // Initial display
+  window.addEventListener('DOMContentLoaded', () => {
+    showSlide(currentIndex);
+  });
+</script>
 </body>
 </html>
