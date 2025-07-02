@@ -1,209 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Crack the Code Learning</title>
-  <link rel="icon" href="favicon.png" type="image/png" />
-  <link rel="stylesheet" href="style.css" media="all" onload="this.media='all'">
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    header { background: #003366; color: #fff; padding: 20px 0; text-align: center; }
-    nav { display: flex; justify-content: center; background: #0055a5; flex-wrap: wrap; }
-    nav a { color: #fff; padding: 14px 20px; text-decoration: none; }
-    nav a:hover { background: #003366; }
-    .hero {
-      background: url('classroom-banner.jpg') no-repeat center 55% / cover;
-      height: 380px;
-      color: white;
-      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .hero h1 { font-size: 2.8em; margin: 0; background-color: rgba(0, 0, 0, 0.5); padding: 10px 20px; border-radius: 10px; }
-    .hero p { font-size: 1.2em; margin-top: 12px; background-color: rgba(0, 0, 0, 0.4); padding: 8px 16px; border-radius: 6px; }
-    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
-    footer { background: #003366; color: white; text-align: center; padding: 20px 0; margin-top: 40px; }
-    .carousel-container { position: relative; max-width: 800px; margin: 40px auto 0; overflow: hidden; }
-    .carousel { display: flex; transition: transform 0.5s ease-in-out; }
-    .testimonial { flex: 0 0 100%; padding: 20px; box-sizing: border-box; display: none; background: white; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    .testimonial.active { display: block; }
-    .prev, .next {
-      cursor: pointer; position: absolute; top: 50%; width: auto;
-      padding: 8px 16px; margin-top: -22px; color: white;
-      background-color: #003366; border: none;
-      border-radius: 50%; font-size: 20px; z-index: 10; user-select: none;
-    }
-    .prev { left: -40px; }
-    .next { right: -40px; }
-    .dots { text-align: center; margin-top: 16px; }
-    .dot {
-      cursor: pointer; height: 12px; width: 12px; margin: 0 6px;
-      background-color: #bbb; border-radius: 50%; display: inline-block;
-    }
-    .dot.active { background-color: #003366; }
-    #whatsapp-button {
-      position: fixed; bottom: 20px; right: 20px; z-index: 1000;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div style="display: flex; align-items: center; justify-content: center;">
-      <img src="logo.png" alt="Crack the Code Learning logo" style="height: 60px; background: white; padding: 8px; border-radius: 12px; margin-right: 12px;">
-      <div>
-        <h1 style="margin: 0;">Crack the Code Learning</h1>
-        <p style="margin: 0;">Coaching Students. Unlocking Potential.</p>
-      </div>
-    </div>
-  </header>
+.carousel-container {
+  position: relative;
+  max-width: 800px;
+  margin: 40px auto 0;
+  overflow: hidden;
+}
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#programmes">Programmes</a>
-    <a href="#coach-asher">Coach Asher</a>
-    <a href="#locations">Centres</a>
-    <a href="#contact">Contact</a>
-    <a href="why-ctcl.html">Why CTCL</a>
-    <a href="why-p3toP6.html">Why P3–P6</a>
-  </nav>
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
 
-  <div class="hero">
-    <h1>Unlock the Code to Success</h1>
-    <p>Specialised Coaching for P3–P6 English & Math</p>
-  </div>
+.testimonial {
+  flex: 0 0 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: none;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
 
-  <section id="about">
-    <h2 style="text-align: center; color: #003366;">About Us</h2>
-    <p style="font-size: 1.1em; line-height: 1.6;">
-      At <strong>Crack the Code Learning (CTCL)</strong>, we believe every child can succeed when taught the right way. Our structured, step-by-step approach helps students tackle English and Math with clarity and confidence.
-    </p>
-    <p style="font-size: 1.1em; line-height: 1.6;">
-      Unlike traditional tuition, we coach our students using proven strategies, formula-based techniques, and engaging content that makes learning not only effective — but enjoyable. With personalised guidance and consistent feedback, we unlock each child's true potential.
-    </p>
-    <p style="font-size: 1.1em; line-height: 1.6;">
-      Whether it's our proprietary <em>CodeKey™ system</em> for English or bite-sized mastery steps in Math, our goal is simple: help students crack the code to success, one concept at a time.
-    </p>
-  </section>
+.testimonial.active {
+  display: block;
+}
 
-  <section id="programmes">
-    <h2 style="text-align: center; color: #003366;">Our Programmes</h2>
-    <ul style="font-size: 1.1em; line-height: 1.8;">
-      <li><strong>P3–P6 English Mastery:</strong> Grammar, Vocabulary, Comprehension, Cloze, Composition & Oral</li>
-      <li><strong>P3–P6 Math Mastery:</strong> STEP-by-step strategies and heuristics to build confidence and accuracy</li>
-      <li><strong>Exam Prep:</strong> Weekly practice, mock exams, and targeted revision before major tests</li>
-      <li><strong>Creative Writing:</strong> Learn to plan, structure and write engaging stories using the BRICK method</li>
-    </ul>
-  </section>
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 8px 16px;
+  margin-top: -22px;
+  color: white;
+  background-color: #003366;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  z-index: 10;
+  user-select: none;
+}
 
-  <section id="coach-asher">
-    <h2 style="text-align: center; color: #003366;">Meet Coach Asher</h2>
-    <p style="font-size: 1.1em; line-height: 1.6;">
-      Coach Asher is a passionate educator who left his corporate career in logistics to pursue his true calling — helping students succeed. After recovering from a life-changing illness, he developed powerful, bite-sized strategies to help students understand complex topics with clarity.
-    </p>
-    <p style="font-size: 1.1em; line-height: 1.6;">
-      With experience coaching hundreds of students, Coach Asher’s unique “Crack the Code” approach has helped students achieve AL1s, overcome learning anxiety, and build lifelong confidence in English and Math.
-    </p>
-    <p style="font-size: 1.1em; line-height: 1.6;">
-      His philosophy? Every child can succeed — with the right method, mindset, and mentor.
-    </p>
-  </section>
+.prev {
+  left: -40px;
+}
+.next {
+  right: -40px;
+}
 
-  <section id="testimonials" style="padding: 40px 20px; background-color: #f0f8ff;">
-    <h2 style="text-align: center; color: #003366;">What Parents Say</h2>
-    <div class="carousel-container">
-      <div class="carousel">
-        <div class="testimonial active">
-          <p><em>“Coach Asher helped my son improve from AL5 to AL2 in just 1 term. His methods really work!”</em></p>
-          <p style="text-align: right;"><strong>— Mrs Lim, P6 Parent</strong></p>
-        </div>
-        <div class="testimonial">
-          <p><em>“My daughter used to hate Comprehension Cloze. Now she actually looks forward to it!”</em></p>
-          <p style="text-align: right;"><strong>— Mr Tan, P5 Parent</strong></p>
-        </div>
-        <div class="testimonial">
-          <p><em>“The CodeKey system is amazing. My son applies it to both Math and English with confidence.”</em></p>
-          <p style="text-align: right;"><strong>— Mdm Ong, P4 Parent</strong></p>
-        </div>
-      </div>
-      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-      <button class="next" onclick="moveSlide(1)">&#10095;</button>
-      <div class="dots">
-        <span class="dot active" onclick="currentSlide(0)"></span>
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-      </div>
-    </div>
-  </section>
+.dots {
+  text-align: center;
+  margin-top: 16px;
+}
 
-  <script>
-    let currentIndex = 0;
-    const testimonials = document.querySelectorAll('.testimonial');
-    const dots = document.querySelectorAll('.dot');
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 6px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
 
-    function showSlide(index) {
-      testimonials.forEach((slide, i) => {
-        slide.classList.remove('active');
-        dots[i].classList.remove('active');
-      });
-      testimonials[index].classList.add('active');
-      dots[index].classList.add('active');
-    }
-
-    function moveSlide(direction) {
-      currentIndex += direction;
-      if (currentIndex < 0) currentIndex = testimonials.length - 1;
-      if (currentIndex >= testimonials.length) currentIndex = 0;
-      showSlide(currentIndex);
-    }
-
-    function currentSlide(index) {
-      currentIndex = index;
-      showSlide(index);
-    }
-  </script>
-
-  <section id="locations">
-    <h2>Our Centres</h2>
-    <p>Locations at Tampines, Bedok Reservoir, and Online Live Classes.</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: ctcl.asher@gmail.com<br/>WeChat: ctcl-asher</p>
-    <a href="https://wa.me/6597708681?text=Hi%20CTCL%2C%20I%27d%20like%20to%20ask%20about%20your%20P3–P6%20classes." 
-       target="_blank" 
-       style="display: inline-block; background-color: #25D366; color: white; font-weight: bold; padding: 10px 16px; border-radius: 8px; text-decoration: none; margin-top: 10px;">
-      <img src="whatsapp-icon.png" alt="WhatsApp" style="height: 20px; vertical-align: middle; margin-right: 8px;">
-      Chat with us on WhatsApp
-    </a>
-  </section>
-
-  <section id="references" style="font-size: 0.9em; color: #555; padding: 0 20px 40px;">
-    <h4>References</h4>
-    <ol>
-      <li id="ref1">
-        Santos R.M.S. et al. (2021). The association between screen time and attention in children: a systematic review.
-        <em>PubMed.</em>
-        <a href="https://pubmed.ncbi.nlm.nih.gov/35430923/" target="_blank">https://pubmed.ncbi.nlm.nih.gov/35430923/</a>
-      </li>
-      <li id="ref2">
-        Teng, F. (2021). The benefits of teaching metacognitive strategies in language classrooms.
-        <em>Language Teaching Research Quarterly.</em>
-        <a href="https://eric.ed.gov/?id=ED611087" target="_blank">https://eric.ed.gov/?id=ED611087</a>
-      </li>
-    </ol>
-  </section>
-
-  <footer>
-    <p>&copy; Crack the Code Learning 2025 | All rights reserved</p>
-  </footer>
-
-  <a href="https://wa.me/6597708681?text=Hi%20CTCL%2C%20I%27d%20like%20to%20ask%20about%20your%20P3–P6%20classes." 
-     target="_blank" id="whatsapp-button" title="Chat with us on WhatsApp">
-    <img src="whatsapp-icon.png" alt="WhatsApp Icon" style="height: 50px;">
-  </a>
-</body>
-</html>
+.dot.active {
+  background-color: #003366;
+}
