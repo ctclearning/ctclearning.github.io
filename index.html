@@ -4,36 +4,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Crack the Code Learning</title>
+  
+  <!-- Favicon -->
   <link rel="icon" href="favicon.png" type="image/png" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="favicon.png" type="image/png" />
+
+  <!-- External CSS: Load non-blocking -->
+  <link rel="stylesheet" href="style.css" media="all" onload="this.media='all'">
+
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
     }
+
     header {
       background: #003366;
       color: #fff;
       padding: 20px 0;
       text-align: center;
     }
+
     nav {
       display: flex;
       justify-content: center;
       background: #0055a5;
       flex-wrap: wrap;
     }
+
     nav a {
       color: #fff;
       padding: 14px 20px;
       text-decoration: none;
     }
+
     nav a:hover {
       background: #003366;
     }
+
     .hero {
-     background: url('classroom-banner.jpg') no-repeat center 55% / cover;
+      background: url('classroom-banner.jpg') no-repeat center 55% / cover;
       height: 380px;
       color: white;
       text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
@@ -42,6 +53,7 @@
       align-items: center;
       justify-content: center;
     }
+
     .hero h1 {
       font-size: 2.8em;
       margin: 0;
@@ -49,6 +61,7 @@
       padding: 10px 20px;
       border-radius: 10px;
     }
+
     .hero p {
       font-size: 1.2em;
       margin-top: 12px;
@@ -56,17 +69,89 @@
       padding: 8px 16px;
       border-radius: 6px;
     }
+
     section {
       padding: 40px 20px;
       max-width: 1000px;
       margin: auto;
     }
+
     footer {
       background: #003366;
       color: white;
       text-align: center;
       padding: 20px 0;
       margin-top: 40px;
+    }
+
+    /* Carousel Styles */
+    .carousel-container {
+      position: relative;
+      max-width: 800px;
+      margin: 40px auto 0;
+      overflow: hidden;
+    }
+
+    .carousel {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .testimonial {
+      flex: 0 0 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      display: none;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .testimonial.active {
+      display: block;
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 8px 16px;
+      margin-top: -22px;
+      color: white;
+      background-color: #003366;
+      border: none;
+      border-radius: 50%;
+      font-size: 20px;
+      z-index: 10;
+      user-select: none;
+    }
+
+    .prev {
+      left: -40px;
+    }
+
+    .next {
+      right: -40px;
+    }
+
+    .dots {
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    .dot {
+      cursor: pointer;
+      height: 12px;
+      width: 12px;
+      margin: 0 6px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .dot.active {
+      background-color: #003366;
     }
   </style>
 </head>
