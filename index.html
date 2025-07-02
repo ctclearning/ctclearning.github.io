@@ -33,7 +33,7 @@
       background: #003366;
     }
     .hero {
-     background: url('classroom-banner.jpg') no-repeat center 55% / cover;
+      background: url('classroom-banner.jpg') no-repeat center 55% / cover;
       height: 380px;
       color: white;
       text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
@@ -68,6 +68,12 @@
       padding: 20px 0;
       margin-top: 40px;
     }
+    #whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
   </style>
 </head>
 <body>
@@ -81,19 +87,19 @@
     </div>
   </header>
 
- <nav>
-  <a href="index.html">Home</a>
-  <a href="#about">About</a>
-  <a href="#programmes">Programmes</a>
-  <a href="#coach-asher">Coach Asher</a>
-  <a href="#locations">Centres</a>
-  <a href="#contact">Contact</a>
-  <a href="why-ctcl.html">Why CTCL</a>
-  <a href="why-p3toP6.html">Why P3–P6</a>
-</nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#about">About</a>
+    <a href="#programmes">Programmes</a>
+    <a href="#coach-asher">Coach Asher</a>
+    <a href="#locations">Centres</a>
+    <a href="#contact">Contact</a>
+    <a href="why-ctcl.html">Why CTCL</a>
+    <a href="why-p3toP6.html">Why P3–P6</a>
+  </nav>
 
-  <div class="hero">
-  </div>
+  <div class="hero"></div>
+
 
   <section id="about">
     <h2>About Us</h2>
@@ -225,67 +231,62 @@
       </div>
     </section>
   </section>
-<section id="coach-asher" style="padding: 40px 20px; background-color: #f5f9ff;">
-  <h2 style="color: #003366;">Meet Coach Asher</h2>
-  <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px; max-width: 1000px; margin: auto;">
-    
-    <img src="coach-asher.jpg" alt="Coach Asher photo" style="max-width: 300px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); flex-shrink: 0;">
-    <div style="flex: 1; min-width: 250px; color: #003366;">
-  <p>Hi, I’m Coach Asher, and I believe students shouldn’t just learn harder — they should learn smarter.</p>
-
-  <p>During my recovery, I became deeply interested in how the brain heals, learns, and grows. What started as a personal journey to rebuild my own cognitive strength led me down the path of neuroscience and cognitive psychology. Along the way, I discovered something powerful — the same strategies that help the brain recover are the very ones that help students learn better.</p>
-
-  <p>Techniques like <strong>metacognition</strong> — learning how to think about your own thinking — weren’t just useful for me. They were transformative for the way students approach learning.</p>
-
-  <p>I left the corporate world to pursue a new mission: to help students unlock their full potential through cognitive coaching. At <strong>Crack the Code Learning</strong>, I now work with Primary 3 to 6 students to master English and Math using structured, brain-based strategies.</p>
-
-  <p>Many of my students improve by 2 to 3 AL bands within a few months — not by doing endless worksheets, but by learning how to break down questions, avoid careless mistakes, and study with clarity and confidence.</p>
-
-  <p><em>This isn’t just tuition. It’s next-gen coaching for the exam-smart generation.</em></p>
-</div>
-  </div>
-</section>
-  </div>
-</section>
-<section id="testimonials" style="padding: 40px 20px; background-color: #f0f8ff;">
-  <h2 style="text-align: center; color: #003366;">What Parents Say</h2>
-  <div class="carousel-container" style="position: relative; max-width: 800px; margin: 40px auto 0;">
-    <div class="carousel" style="display: flex; transition: transform 0.5s ease-in-out;">
-      <div class="testimonial active" style="flex: 0 0 100%; padding: 20px; display: block; background: white; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-        <p><em>“Coach Asher helped my son improve from AL5 to AL2 in just 1 term. His methods really work!”</em></p>
-        <p style="text-align: right;"><strong>— Mrs Lim, P6 Parent</strong></p>
-      </div>
-      <div class="testimonial" style="flex: 0 0 100%; padding: 20px; display: none; background: white; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-        <p><em>“My daughter used to hate Comprehension Cloze. Now she actually looks forward to it!”</em></p>
-        <p style="text-align: right;"><strong>— Mr Tan, P5 Parent</strong></p>
-      </div>
-      <div class="testimonial" style="flex: 0 0 100%; padding: 20px; display: none; background: white; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-        <p><em>“The CodeKey system is amazing. My son applies it to both Math and English with confidence.”</em></p>
-        <p style="text-align: right;"><strong>— Mdm Ong, P4 Parent</strong></p>
+<!-- Coach Asher Section -->
+  <section id="coach-asher" style="padding: 40px 20px; background-color: #f5f9ff;">
+    <h2 style="color: #003366;">Meet Coach Asher</h2>
+    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px; max-width: 1000px; margin: auto;">
+      <img src="coach-asher.jpg" alt="Coach Asher photo" style="max-width: 300px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); flex-shrink: 0;">
+      <div style="flex: 1; min-width: 250px; color: #003366;">
+        <p>Hi, I’m Coach Asher, and I believe students shouldn’t just learn harder — they should learn smarter.</p>
+        <p>During my recovery, I became deeply interested in how the brain heals, learns, and grows. What started as a personal journey to rebuild my own cognitive strength led me down the path of neuroscience and cognitive psychology. Along the way, I discovered something powerful — the same strategies that help the brain recover are the very ones that help students learn better.</p>
+        <p>Techniques like <strong>metacognition</strong> — learning how to think about your own thinking — weren’t just useful for me. They were transformative for the way students approach learning.</p>
+        <p>I left the corporate world to pursue a new mission: to help students unlock their full potential through cognitive coaching. At <strong>Crack the Code Learning</strong>, I now work with Primary 3 to 6 students to master English and Math using structured, brain-based strategies.</p>
+        <p>Many of my students improve by 2 to 3 AL bands within a few months — not by doing endless worksheets, but by learning how to break down questions, avoid careless mistakes, and study with clarity and confidence.</p>
+        <p><em>This isn’t just tuition. It’s next-gen coaching for the exam-smart generation.</em></p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" style="padding: 40px 20px; background-color: #f0f8ff;">
+    <h2 style="text-align: center; color: #003366;">What Parents Say</h2>
+    <div class="carousel-container" style="position: relative; max-width: 800px; margin: 40px auto 0;">
+      <div class="carousel" style="display: flex; transition: transform 0.5s ease-in-out;">
+        <div class="testimonial" style="flex: 0 0 100%; padding: 20px; display: block; background: white; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+          <p><em>“Coach Asher helped my son improve from AL5 to AL2 in just 1 term. His methods really work!”</em></p>
+          <p style="text-align: right;"><strong>— Mrs Lim, P6 Parent</strong></p>
+        </div>
+        <div class="testimonial" style="flex: 0 0 100%; padding: 20px; display: none; background: white; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+          <p><em>“My daughter used to hate Comprehension Cloze. Now she actually looks forward to it!”</em></p>
+          <p style="text-align: right;"><strong>— Mr Tan, P5 Parent</strong></p>
+        </div>
+        <div class="testimonial" style="flex: 0 0 100%; padding: 20px; display: none; background: white; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+          <p><em>“The CodeKey system is amazing. My son applies it to both Math and English with confidence.”</em></p>
+          <p style="text-align: right;"><strong>— Mdm Ong, P4 Parent</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Locations -->
   <section id="locations">
     <h2>Our Centres</h2>
     <p>Locations at Tampines, Bedok Reservoir, and Online Live Classes.</p>
   </section>
 
-  <p>
- <section id="contact">
-  <h2>Contact Us</h2>
-  <p>Email: ctcl.asher@gmail.com<br/>WeChat: ctcl-asher</p>
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: ctcl.asher@gmail.com<br/>WeChat: ctcl-asher</p>
+    <a href="https://wa.me/6597708681?text=Hi%20CTCL%2C%20I%27d%20like%20to%20ask%20about%20your%20P3–P6%20classes." 
+       target="_blank" 
+       style="display: inline-block; background-color: #25D366; color: white; font-weight: bold; padding: 10px 16px; border-radius: 8px; text-decoration: none; margin-top: 10px;">
+      <img src="whatsapp-icon.png" alt="WhatsApp" style="height: 20px; vertical-align: middle; margin-right: 8px;">
+      Chat with us on WhatsApp
+    </a>
+  </section>
 
-  <!-- WhatsApp Button -->
-  <a href="https://wa.me/6597708681?text=Hi%20CTCL%2C%20I%27d%20like%20to%20ask%20about%20your%20P3–P6%20classes." 
-     target="_blank" 
-     style="display: inline-block; background-color: #25D366; color: white; font-weight: bold; padding: 10px 16px; border-radius: 8px; text-decoration: none; margin-top: 10px;">
-    <img src="whatsapp-icon.png" alt="WhatsApp" style="height: 20px; vertical-align: middle; margin-right: 8px;">
-    Chat with us on WhatsApp
-  </a>
-</section>
-</p>
-
+  <!-- References -->
   <section id="references" style="font-size: 0.9em; color: #555; padding: 0 20px 40px;">
     <h4>References</h4>
     <ol>
@@ -302,47 +303,42 @@
     </ol>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; Crack the Code Learning 2025 | All rights reserved</p>
   </footer>
- <!-- WhatsApp Chat Button -->
-<a href="https://wa.me/6597708681?text=Hi%20CTCL%2C%20I%27d%20like%20to%20ask%20about%20your%20P3–P6%20classes." 
-   target="_blank" 
-   id="whatsapp-button" 
-   title="Chat with us on WhatsApp">
-  <img src="whatsapp-icon.png" alt="WhatsApp Icon" style="height: 50px;">
-</a>
 
-<style>
-  #whatsapp-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-  }
-</style>
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/6597708681?text=Hi%20CTCL%2C%20I%27d%20like%20to%20ask%20about%20your%20P3–P6%20classes." 
+     target="_blank" 
+     id="whatsapp-button" 
+     title="Chat with us on WhatsApp">
+    <img src="whatsapp-icon.png" alt="WhatsApp Icon" style="height: 50px;">
+  </a>
+
+  <!-- Carousel JavaScript -->
   <script>
-  let currentIndex = 0;
-  const testimonials = document.querySelectorAll('.testimonial');
+    let currentIndex = 0;
+    const testimonials = document.querySelectorAll('.testimonial');
 
-  function showSlide(index) {
-    testimonials.forEach((testimonial, i) => {
-      testimonial.style.display = i === index ? 'block' : 'none';
+    function showSlide(index) {
+      testimonials.forEach((testimonial, i) => {
+        testimonial.style.display = i === index ? 'block' : 'none';
+      });
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % testimonials.length;
+      showSlide(currentIndex);
+    }
+
+    // Auto-rotate every 6 seconds
+    setInterval(nextSlide, 6000);
+
+    // Initial display after DOM loads
+    window.addEventListener('DOMContentLoaded', () => {
+      showSlide(currentIndex);
     });
-  }
-
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % testimonials.length;
-    showSlide(currentIndex);
-  }
-
-  // Auto-rotate every 6 seconds
-  setInterval(nextSlide, 6000);
-
-  // Initial display
-  window.addEventListener('DOMContentLoaded', () => {
-    showSlide(currentIndex);
-  });
-</script>
+  </script>
 </body>
 </html>
