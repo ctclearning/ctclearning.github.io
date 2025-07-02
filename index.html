@@ -250,24 +250,35 @@
 
   <!-- Testimonials -->
   <section id="testimonials" style="padding: 40px 20px; background-color: #f0f8ff;">
-    <h2 style="text-align: center; color: #003366;">What Parents Say</h2>
-    <div class="carousel-container" style="position: relative; max-width: 800px; margin: 40px auto 0;">
-      <div class="carousel" style="display: flex; transition: transform 0.5s ease-in-out;">
-        <div class="testimonial" style="flex: 0 0 100%; padding: 20px; display: block; background: white; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-          <p><em>“Coach Asher helped my son improve from AL5 to AL2 in just 1 term. His methods really work!”</em></p>
-          <p style="text-align: right;"><strong>— Mrs Lim, P6 Parent</strong></p>
-        </div>
-        <div class="testimonial" style="flex: 0 0 100%; padding: 20px; display: none; background: white; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-          <p><em>“My daughter used to hate Comprehension Cloze. Now she actually looks forward to it!”</em></p>
-          <p style="text-align: right;"><strong>— Mr Tan, P5 Parent</strong></p>
-        </div>
-        <div class="testimonial" style="flex: 0 0 100%; padding: 20px; display: none; background: white; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-          <p><em>“The CodeKey system is amazing. My son applies it to both Math and English with confidence.”</em></p>
-          <p style="text-align: right;"><strong>— Mdm Ong, P4 Parent</strong></p>
-        </div>
+  <h2 style="text-align: center; color: #003366;">What Parents Say</h2>
+  <div class="carousel-container" style="position: relative; max-width: 800px; margin: 40px auto;">
+    <div class="carousel" style="display: flex; transition: transform 0.5s ease-in-out;">
+      <div class="testimonial active" style="flex: 0 0 100%; padding: 20px; background: white; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); display: block;">
+        <p><em>“Coach Asher helped my son improve from AL5 to AL2 in just 1 term. His methods really work!”</em></p>
+        <p style="text-align: right;"><strong>— Mrs Lim, P6 Parent</strong></p>
+      </div>
+      <div class="testimonial" style="flex: 0 0 100%; padding: 20px; background: white; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); display: none;">
+        <p><em>“My daughter used to hate Comprehension Cloze. Now she actually looks forward to it!”</em></p>
+        <p style="text-align: right;"><strong>— Mr Tan, P5 Parent</strong></p>
+      </div>
+      <div class="testimonial" style="flex: 0 0 100%; padding: 20px; background: white; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); display: none;">
+        <p><em>“The CodeKey system is amazing. My son applies it to both Math and English with confidence.”</em></p>
+        <p style="text-align: right;"><strong>— Mdm Ong, P4 Parent</strong></p>
       </div>
     </div>
-  </section>
+
+    <!-- Arrow Controls -->
+    <button class="prev" onclick="moveSlide(-1)" style="position: absolute; top: 50%; left: -40px; transform: translateY(-50%); background: #003366; color: white; border: none; border-radius: 50%; padding: 10px 14px; font-size: 20px; cursor: pointer;">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)" style="position: absolute; top: 50%; right: -40px; transform: translateY(-50%); background: #003366; color: white; border: none; border-radius: 50%; padding: 10px 14px; font-size: 20px; cursor: pointer;">&#10095;</button>
+
+    <!-- Dots -->
+    <div class="dots" style="text-align: center; margin-top: 16px;">
+      <span class="dot active" onclick="currentSlide(0)" style="height: 12px; width: 12px; margin: 0 6px; background-color: #003366; border-radius: 50%; display: inline-block; cursor: pointer;"></span>
+      <span class="dot" onclick="currentSlide(1)" style="height: 12px; width: 12px; margin: 0 6px; background-color: #bbb; border-radius: 50%; display: inline-block; cursor: pointer;"></span>
+      <span class="dot" onclick="currentSlide(2)" style="height: 12px; width: 12px; margin: 0 6px; background-color: #bbb; border-radius: 50%; display: inline-block; cursor: pointer;"></span>
+    </div>
+  </div>
+</section>
 
   <!-- Locations -->
   <section id="locations">
@@ -319,27 +330,32 @@
 
   <!-- Carousel JavaScript -->
   <script>
-    let currentIndex = 0;
-    const testimonials = document.querySelectorAll('.testimonial');
+  let currentIndex = 0;
+  const testimonials = document.querySelectorAll('.testimonial');
+  const dots = document.querySelectorAll('.dot');
 
-    function showSlide(index) {
-      testimonials.forEach((testimonial, i) => {
-        testimonial.style.display = i === index ? 'block' : 'none';
-      });
-    }
-
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % testimonials.length;
-      showSlide(currentIndex);
-    }
-
-    // Auto-rotate every 6 seconds
-    setInterval(nextSlide, 6000);
-
-    // Initial display after DOM loads
-    window.addEventListener('DOMContentLoaded', () => {
-      showSlide(currentIndex);
+  function showSlide(index) {
+    testimonials.forEach((slide, i) => {
+      slide.style.display = i === index ? 'block' : 'none';
+      dots[i].style.backgroundColor = i === index ? '#003366' : '#bbb';
     });
-  </script>
+  }
+
+  function moveSlide(direction) {
+    currentIndex = (currentIndex + direction + testimonials.length) % testimonials.length;
+    showSlide(currentIndex);
+  }
+
+  function currentSlide(index) {
+    currentIndex = index;
+    showSlide(currentIndex);
+  }
+
+  setInterval(() => moveSlide(1), 6000); // Auto-rotate every 6 seconds
+
+  window.addEventListener('DOMContentLoaded', () => {
+    showSlide(currentIndex);
+  });
+</script>
 </body>
 </html>
