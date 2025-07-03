@@ -269,35 +269,47 @@
 
     <!-- Arrow Controls -->
     <!-- Arrow Controls (Updated Positioning) -->
-<button class="prev" onclick="moveSlide(-1)" style="
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
-  background: #003366;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  padding: 10px 14px;
-  font-size: 20px;
-  cursor: pointer;
-  z-index: 10;
-">&#10094;</button>
+<button class="prev" onclick="moveSlide(-1)" 
+  aria-label="Previous testimonial"
+  onmouseover="this.style.backgroundColor='#001f4d';"
+  onmouseout="this.style.backgroundColor='#003366';"
+  style="
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background: #003366;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 14px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+  ">
+  &#10094;
+</button>
 
-<button class="next" onclick="moveSlide(1)" style="
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  background: #003366;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  padding: 10px 14px;
-  font-size: 20px;
-  cursor: pointer;
-  z-index: 10;
-">&#10095;</button>
+<button class="next" onclick="moveSlide(1)" 
+  aria-label="Next testimonial"
+  onmouseover="this.style.backgroundColor='#001f4d';"
+  onmouseout="this.style.backgroundColor='#003366';"
+  style="
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: #003366;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 14px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+  ">
+  &#10095;
+</button>
     <!-- Dots -->
     <div class="dots" style="text-align: center; margin-top: 16px;">
       <span class="dot active" onclick="currentSlide(0)" style="height: 12px; width: 12px; margin: 0 6px; background-color: #003366; border-radius: 50%; display: inline-block; cursor: pointer;"></span>
